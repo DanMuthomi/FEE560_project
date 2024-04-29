@@ -1,0 +1,67 @@
+//Tidied Up Version
+
+function decodeUplink(input) {
+  // Initialize the data object
+  var data = {};
+  
+  // Parse the temperature sign
+  data.Temperature_Sign = parseInt(input.bytes[0]-48);
+
+  // Parse the temperature in Celsius
+  data.Temperature_Celsius = (
+    10*(input.bytes[1]-48) + 
+    1*(input.bytes[2]-48) + 
+    0.1*(input.bytes[3]-48) + 
+    0.01 *(input.bytes[4]-48)
+  );
+  
+  // Parse the pressure in hPa
+  data.Pressure_hPa = (
+    1000*(input.bytes[5]-48) + 
+    100*(input.bytes[6]-48) + 
+    10 *(input.bytes[7]-48) + 
+    1*(input.bytes[8]-48) + 
+    0.1*(input.bytes[9]-48) + 
+    0.01 *(input.bytes[10]-48)
+  );
+  
+  // Parse the relative humidity percentage
+  data.Relative_Humidity_Percentage = (
+    100*(input.bytes[11]-48) + 
+    10*(input.bytes[12]-48) + 
+    1 *(input.bytes[13]-48) + 
+    0.1*(input.bytes[14]-48) + 
+    0.01*(input.bytes[15]-48)
+  );
+  
+  // Parse the air quality index
+  data.AirQualityIndex = 1 *(input.bytes[16]-48);
+  
+  // Parse the volatile organic compounds in ppb
+  data.VolatileOrganicCompounds_ppb = (
+    10000*(input.bytes[17]-48) + 
+    1000*(input.bytes[18]-48) + 
+    100 *(input.bytes[19]-48) + 
+    10*(input.bytes[20]-48) + 
+    1*(input.bytes[21]-48)
+  );
+  
+  // Parse the environmental CO2 level
+  data.EnviromentalCO2 = (
+    1000*(input.bytes[22]-48) + 
+    100*(input.bytes[23]-48) + 
+    100 *(input.bytes[24]-48) + 
+    10*(input.bytes[25]-48) + 
+    1*(input.bytes[26]-48)
+  );
+  
+  // If the temperature sign is 1, make the temperature negative
+  if (data.Temperature_Sign == 1) {
+    data.True_Temperature_Celsius = data.Temperature_Celsius * -1;
+  }
+  
+  // Return the data object
+  return {
+    data: data,
+  };
+}
