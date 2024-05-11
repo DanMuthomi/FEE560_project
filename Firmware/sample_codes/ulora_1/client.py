@@ -20,3 +20,4 @@ while True:
     lora.send_to_wait("This is a test message", SERVER_ADDRESS)
     print("sent")
     sleep(10)
+
