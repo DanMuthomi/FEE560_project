@@ -3074,7 +3074,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 88.9) (xy 38.1 88.9)
+			(xy 41.91 88.9) (xy 49.53 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3260,7 +3260,7 @@
 	)
 	(global_label "RESET"
 		(shape input)
-		(at 38.1 68.58 180)
+		(at 49.53 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3270,7 +3270,7 @@
 		)
 		(uuid "48e563f3-9fa2-4906-b8f4-18b3dc7a5a1d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 29.3697 68.58 0)
+			(at 40.7997 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3326,7 +3326,7 @@
 	)
 	(global_label "SCK"
 		(shape input)
-		(at 38.1 78.74 180)
+		(at 49.53 78.74 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3336,7 +3336,7 @@
 		)
 		(uuid "5dc62dcc-cb7d-4fe0-ad8c-ba24024d98fa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 31.3653 78.74 0)
+			(at 42.7953 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3370,7 +3370,7 @@
 	)
 	(global_label "MISO"
 		(shape input)
-		(at 38.1 83.82 180)
+		(at 49.53 83.82 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3380,7 +3380,7 @@
 		)
 		(uuid "6add84d8-d497-415b-87e8-c55c3fd5b860")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.5186 83.82 0)
+			(at 41.9486 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3436,7 +3436,7 @@
 	)
 	(global_label "DIO0"
 		(shape input)
-		(at 68.58 73.66 0)
+		(at 80.01 73.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3446,7 +3446,7 @@
 		)
 		(uuid "7e1ec027-25c1-4aee-a057-489294a13e36")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 75.98 73.66 0)
+			(at 87.41 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3524,7 +3524,7 @@
 	)
 	(global_label "MOSI"
 		(shape input)
-		(at 38.1 81.28 180)
+		(at 49.53 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3534,7 +3534,7 @@
 		)
 		(uuid "b95ef6aa-6831-4915-b6a8-1d5d3481d4c4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.5186 81.28 0)
+			(at 41.9486 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3568,7 +3568,7 @@
 	)
 	(global_label "NSS"
 		(shape input)
-		(at 38.1 76.2 180)
+		(at 49.53 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3578,7 +3578,7 @@
 		)
 		(uuid "bf1a072c-09fd-4277-8075-39f59e051bae")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 31.3653 76.2 0)
+			(at 42.7953 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4262,7 +4262,7 @@
 	)
 	(symbol
 		(lib_id "COM-13909:RFM69HCW LoRa module")
-		(at 53.34 78.74 0)
+		(at 64.77 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4271,7 +4271,7 @@
 		(fields_autoplaced yes)
 		(uuid "34c5a69a-2438-4e89-90ae-80ab21e9d10b")
 		(property "Reference" "U4"
-			(at 53.34 60.96 0)
+			(at 64.77 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4279,7 +4279,7 @@
 			)
 		)
 		(property "Value" "RFM69HCW LoRa module"
-			(at 53.34 63.5 0)
+			(at 64.77 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4287,7 +4287,7 @@
 			)
 		)
 		(property "Footprint" "My_Footprints:RFM69HCW LoRa module"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4297,7 +4297,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4306,7 +4306,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4315,7 +4315,7 @@
 			)
 		)
 		(property "MF" "HOPERF"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4325,7 +4325,7 @@
 			)
 		)
 		(property "Description_1" "\nGeneral ISM < 1GHz Transceiver Module 915MHz Surface Mount\n"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4335,7 +4335,7 @@
 			)
 		)
 		(property "Package" "Module SparkFun Electronics"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4345,7 +4345,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4355,7 +4355,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/RFM69HCW-315S2/HOPERF/view-part/?ref=eda"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4365,7 +4365,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/RFM69HCW-315S2/HOPERF/view-part/?ref=snap"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4375,7 +4375,7 @@
 			)
 		)
 		(property "MP" "RFM69HCW-315S2"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4385,7 +4385,7 @@
 			)
 		)
 		(property "Availability" "Not in stock"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4395,7 +4395,7 @@
 			)
 		)
 		(property "MANUFACTURER" "SparkFun Electronics"
-			(at 53.34 78.74 0)
+			(at 64.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4741,7 +4741,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 68.58 68.58 270)
+		(at 80.01 68.58 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4750,7 +4750,7 @@
 		(fields_autoplaced yes)
 		(uuid "62e54250-ca0f-453e-b462-e29221edcac9")
 		(property "Reference" "#PWR021"
-			(at 64.77 68.58 0)
+			(at 76.2 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4759,7 +4759,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 72.39 68.5799 90)
+			(at 83.82 68.5799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4768,7 +4768,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 68.58 0)
+			(at 80.01 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4777,7 +4777,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 68.58 0)
+			(at 80.01 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4786,7 +4786,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 68.58 68.58 0)
+			(at 80.01 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4875,7 +4875,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 25.4 88.9 180)
+		(at 36.83 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4884,7 +4884,7 @@
 		(fields_autoplaced yes)
 		(uuid "65d8b8c6-6ad0-4aa7-b3b9-56034b3a7887")
 		(property "Reference" "J4"
-			(at 21.59 87.3367 0)
+			(at 33.02 87.3367 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4893,7 +4893,7 @@
 			)
 		)
 		(property "Value" "Conn_Coaxial"
-			(at 21.59 89.8767 0)
+			(at 33.02 89.8767 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4902,7 +4902,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Coaxial:SMA_Amphenol_132134_Vertical"
-			(at 25.4 88.9 0)
+			(at 36.83 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4911,7 +4911,7 @@
 			)
 		)
 		(property "Datasheet" " ~"
-			(at 25.4 88.9 0)
+			(at 36.83 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4920,7 +4920,7 @@
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-			(at 25.4 88.9 0)
+			(at 36.83 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5148,7 +5148,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 68.58 91.44 0)
+		(at 80.01 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5157,7 +5157,7 @@
 		(fields_autoplaced yes)
 		(uuid "70c5763f-3f04-48ba-8724-c01900e9383b")
 		(property "Reference" "#PWR022"
-			(at 68.58 97.79 0)
+			(at 80.01 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5166,7 +5166,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 68.58 96.52 0)
+			(at 80.01 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5174,7 +5174,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 91.44 0)
+			(at 80.01 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5183,7 +5183,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 91.44 0)
+			(at 80.01 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5192,7 +5192,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 68.58 91.44 0)
+			(at 80.01 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6500,7 +6500,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 25.4 83.82 180)
+		(at 36.83 83.82 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6509,7 +6509,7 @@
 		(fields_autoplaced yes)
 		(uuid "ebfff1f6-6623-46f3-9b25-e2ab2e91e67f")
 		(property "Reference" "#PWR026"
-			(at 25.4 77.47 0)
+			(at 36.83 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6518,7 +6518,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 25.4 78.74 0)
+			(at 36.83 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6526,7 +6526,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 25.4 83.82 0)
+			(at 36.83 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6535,7 +6535,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 25.4 83.82 0)
+			(at 36.83 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6544,7 +6544,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 25.4 83.82 0)
+			(at 36.83 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
