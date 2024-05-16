@@ -1,5 +1,5 @@
 from time import sleep
-from ulora import LoRa, ModemConfig, SPIConfig
+from ulora1 import LoRa, ModemConfig, SPIConfig
 
 # This is our callback function that runs when a message is received
 def on_recv(payload):

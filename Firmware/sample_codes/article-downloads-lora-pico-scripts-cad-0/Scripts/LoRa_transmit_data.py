@@ -23,16 +23,16 @@ app_key = 'None'
 
 # Regional LoRaWAN settings. You may need to modify these depending on your region.
 # If you are using AU915: Australia
-band='AU915'
-channels='8-15'
+#band='AU915'
+#channels='8-15'
 
 # If you are using US915
 # band='US915'
 # channels='8-15'
 # 
 # If you are using EU868
-# band='EU868'
-# channels='0-2'
+band='EU868'
+channels='0-2'
 
 
 
