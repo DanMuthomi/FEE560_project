@@ -70,8 +70,8 @@ while True:
                 print(message)
                 
                 # Convert message to string
-                #message_str = (f"Initial: {initial_moisture:.2f}%, Duration: {pump_duration:.2f}s, "
-                 #              f"Water Used: {water_used:.2f}L, Final: {final_moisture:.2f}%")
+                message_str = (f"Initial: {initial_moisture:.2f}%, Duration: {pump_duration:.2f}s, Water Used: {water_used:.2f}L, Final: {final_moisture:.2f}%")
+                print(message_str)
                 
                 # Send data to TTN via LoRa
                 lora.send_to_wait(message_str, SERVER_ADDRESS)
