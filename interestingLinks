@@ -12,3 +12,12 @@ https://dronebotworkshop.com/lora/
 
 #Arduino LoRa module connection map
 https://github.com/IOT-MCU/LoRa-Radio-Node-v1.0
+
+#pico lora with devID c
+https://www.waveshare.com/wiki/Pico-LoRa-SX1262-868M
+
+#lora micropython with devID 
+https://github.com/oksbwn/FiPy-LoraWAN-TTN-DHT12-Project/tree/master/DHT12%20Lora%20TTN_Thingspeak%20Code
+
+#lora circuitPython with devID
+https://github.com/fantasticdonkey/uLoRa/tree/master
