@@ -13,24 +13,22 @@ import ujson
 from ulora import TTN, uLoRa
 
 # Heltec ESP32 LoRa V2 development board SPI pins
-LORA_CS = const(18)
-LORA_SCK = const(5)
-LORA_MOSI = const(27)
-LORA_MISO = const(19)
-LORA_IRQ = const(26)
-LORA_RST = const(14)
+LORA_CS = const(1)
+LORA_SCK = const(2)
+LORA_MOSI = const(3)
+LORA_MISO = const(4)
+LORA_IRQ = const(5)
+LORA_RST = const(0)
 LORA_DATARATE = "SF9BW125"
 LORA_FPORT = const(1)
 
 # The Things Network (TTN) device details (available in TTN console)
 # TTN device address, 4 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_DEVADDR = bytearray([0x00, 0x00, 0x00, 0x00])
+TTN_DEVADDR = bytearray([0x26, 0x0B, 0x4A, 0x9B])
 # TTN network session key, 16 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_NWKEY = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+TTN_NWKEY = bytearray([0xB6, 0xDA, 0x0D, 0x4D, 0xF3, 0x7E, 0x4B, 0x80, 0x23, 0x3D, 0x38, 0x45, 0x3F, 0x47, 0x10, 0xC7])
 # TTN application session key, 16 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_APP = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+TTN_APP = bytearray([0x8C, 0x43, 0xA7, 0x83, 0x85, 0x4B, 0xF5, 0xB4, 0x6F, 0xBE, 0x2F, 0xE0, 0x7E, 0x9B, 0xD0, 0xF8])
 TTN_CONFIG = TTN(TTN_DEVADDR, TTN_NWKEY, TTN_APP, country="EU")
 
 # Additional configurations
@@ -80,7 +78,7 @@ def main():
         data += round(temperature + TEMP_OFFSET).to_bytes(1, "big")
         data += round(pressure / 1000).to_bytes(1, "big")
         data += round(humidity).to_bytes(1, "big")"""
-    data = "This is a test"
+    data = b"This is a test"  # Convert string to bytes
     # LoRaWAN / TTN send
     lora = uLoRa(
         cs=LORA_CS,
@@ -93,6 +91,9 @@ def main():
         datarate=LORA_DATARATE,
         fport=LORA_FPORT
     )
+    print("Sending packet...", lora.frame_counter, data)
+    # Send raw data without any LoRaWAN packet structure
+    lora.send_data_raw(b'This is a test')
     print("Sending packet...", lora.frame_counter, ubinascii.hexlify(data))
     lora.send_data(data, len(data), lora.frame_counter)
     print(len(data), "bytes sent!")

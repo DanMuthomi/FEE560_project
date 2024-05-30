@@ -112,9 +112,10 @@ class uLoRa:
         """
         self._irq = machine.Pin(irq, machine.Pin.IN)
         self._cs = machine.Pin(cs, machine.Pin.OUT, value=1)
-        self._rst = machine.Pin(rst, machine.Pin.OUT, value=1)
+        self._rst = machine.Pin(cs, machine.Pin.OUT, value=1)
         # Set up SPI device on Mode 0
         self._device = machine.SPI(
+            id=0,
             baudrate=4000000,
             polarity=0,
             phase=0,
@@ -170,7 +171,7 @@ class uLoRa:
         # Give the uLoRa object ttn configuration
         self._ttn_config = ttn_config
 
-    def send_data(self, data, data_length, frame_counter, timeout=2):
+    def send_data_enc(self, data, data_length, frame_counter, timeout=2):
         """ Function to assemble and send data.
         """
         # Data packet
@@ -220,6 +221,61 @@ class uLoRa:
         # Recalculate packet length (add MIC length)
         lora_pkt_len += 4
         print("PHYPayload with FRMPayload + MIC", ubinascii.hexlify(lora_pkt))
+        self.send_packet(lora_pkt, lora_pkt_len, timeout)
+        
+    def send_data(self, data, data_length, frame_counter, timeout=2):
+        """ Function to assemble and send data without encryption.
+        """
+        # Data packet
+        lora_pkt = bytearray(64)
+    
+        # Construct MAC Layer packet (PHYPayload)
+        # MHDR (MAC Header) - 1 byte
+        lora_pkt[0] = 0x40  # MType: unconfirmed data up, RFU / Major zeroed
+    
+        # MACPayload
+        # FHDR (Frame Header): DevAddr (4 bytes) - short device address
+        lora_pkt[1] = self._ttn_config.device_address[3]
+        lora_pkt[2] = self._ttn_config.device_address[2]
+        lora_pkt[3] = self._ttn_config.device_address[1]
+        lora_pkt[4] = self._ttn_config.device_address[0]
+        # FHDR (Frame Header): FCtrl (1 byte) - frame control
+        lora_pkt[5] = 0x00
+        # FHDR (Frame Header): FCnt (2 bytes) - frame counter
+        lora_pkt[6] = frame_counter & 0x00FF
+        lora_pkt[7] = (frame_counter >> 8) & 0x00FF
+        # FPort - port field
+        lora_pkt[8] = self._fport
+    
+        # Set length of LoRa packet
+        lora_pkt_len = 9
+        print("PHYPayload (MHDR + FHDR + FPort):", ubinascii.hexlify(lora_pkt[:lora_pkt_len]))
+    
+        # FRMPayload - MAC Frame Payload
+        lora_pkt[lora_pkt_len:lora_pkt_len + data_length] = data[0:data_length]
+        lora_pkt_len += data_length
+        print("PHYPayload with FRMPayload:", ubinascii.hexlify(lora_pkt[:lora_pkt_len]))
+    
+        # Calculate Message Integrity Code (MIC)
+        # Skip MIC calculation if sending without encryption
+        mic = bytearray(4)
+        mic[:] = b'\x00\x00\x00\x00'  # Placeholder MIC
+    
+        # Load MIC in package
+        lora_pkt[lora_pkt_len:lora_pkt_len + 4] = mic[0:4]
+        lora_pkt_len += 4
+        print("PHYPayload with FRMPayload + MIC:", ubinascii.hexlify(lora_pkt[:lora_pkt_len]))
+    
+        self.send_packet(lora_pkt, lora_pkt_len, timeout)
+        
+    def send_data_raw(self, data, timeout=2):
+        """ Function to send raw data without any LoRaWAN headers or encryption. """
+        # Create a packet with just the raw data
+        lora_pkt = bytearray(data)
+        lora_pkt_len = len(lora_pkt)
+    
+        print("Sending raw data:", ubinascii.hexlify(lora_pkt[:lora_pkt_len]))
+    
         self.send_packet(lora_pkt, lora_pkt_len, timeout)
 
     def send_packet(self, lora_packet, packet_length, timeout):
