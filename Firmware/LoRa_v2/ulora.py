@@ -21,7 +21,7 @@ import machine
 import utime
 import urandom
 import ubinascii
-import ulora_encryption
+import ulora_encryption_1
 
 # SX1276 operating mode settings
 _MODE_SLEEP = const(0x00)

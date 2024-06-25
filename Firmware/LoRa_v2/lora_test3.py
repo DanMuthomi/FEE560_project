@@ -2,7 +2,7 @@
 import utime
 import ujson  # Import ujson for JSON handling
 from machine import Pin
-from ulora import TTN, uLoRa
+from ulora_4 import TTN, uLoRa
 
 # Heltec ESP32 LoRa V2 development board SPI pins
 LORA_CS = const(1)

@@ -1,7 +1,7 @@
 #String code
 import utime
 from machine import Pin
-from ulora import TTN, uLoRa
+from ulora_3 import TTN, uLoRa
 
 # Heltec ESP32 LoRa V2 development board SPI pins
 LORA_CS = const(1)
