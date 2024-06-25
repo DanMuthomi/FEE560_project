@@ -75,7 +75,7 @@ device_config = {
 
 """
 
-# ES32 TTGO v1.0 
+# Device vconfigurations for raspberry pi pico
 device_config = {
     'spi_unit': 0,
     'miso':4,
@@ -109,6 +109,7 @@ wifi_config = {
     'password':''
 }
 
+# Device credentials for server access
 ttn_config = {
     'devaddr': bytearray([0x26, 0x0B, 0x4A, 0x9E]),
     'nwkey': bytearray([0xB6, 0xDA, 0x0D, 0x4D, 0xF3, 0x7E, 0x4B, 0x80, 0x23, 0x3D, 0x38, 0x45, 0x3F, 0x47, 0x10, 0xC7]),
