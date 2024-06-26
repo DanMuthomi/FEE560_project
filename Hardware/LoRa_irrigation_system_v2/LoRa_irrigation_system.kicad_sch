@@ -3390,28 +3390,6 @@
 			)
 		)
 	)
-	(global_label "MoistureLOW"
-		(shape input)
-		(at 187.96 144.78 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6cf88f60-2565-42e5-847b-65aba932756f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.182 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SCK"
 		(shape input)
 		(at 111.76 62.23 180)
@@ -3610,6 +3588,28 @@
 			)
 		)
 	)
+	(global_label "DataSend"
+		(shape input)
+		(at 187.96 144.78 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c7ab5272-7a28-4ff5-92e1-31d0ce615b97")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 176.085 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "MoistureOK"
 		(shape input)
 		(at 137.16 92.71 0)
@@ -3632,7 +3632,7 @@
 			)
 		)
 	)
-	(global_label "MoistureLOW"
+	(global_label "DataSend"
 		(shape input)
 		(at 137.16 95.25 0)
 		(fields_autoplaced yes)
@@ -3644,7 +3644,7 @@
 		)
 		(uuid "fe12bc35-66ce-4894-982b-f25bba52ff8e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 151.938 95.25 0)
+			(at 149.035 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6381,8 +6381,9 @@
 				)
 			)
 		)
-		(property "Value" "low moisture LED"
+		(property "Value" "data sending LED"
 			(at 206.0575 139.7 0)
+			(show_name yes)
 			(effects
 				(font
 					(size 1.27 1.27)
